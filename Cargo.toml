@@ -1,0 +1,22 @@
+[package]
+name = "unwrap-gui"
+version = "0.1.0"
+description = "Unwrap Gui"
+repository = "https://github.com/Tribufu/UnwrapGui"
+authors = ["Tribufu <contact@tribufu.com>"]
+license = "MIT"
+edition = "2021"
+
+[lib]
+name = "unwrap_gui"
+crate-type = ["rlib"]
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1.0.82"
+
+[target.'cfg(any(target_os = "windows", target_os = "linux", target_os = "macos"))'.dependencies]
+native-dialog = "0.7.0"
+
+[dev-dependencies]
+anyhow = "1.0.82"
